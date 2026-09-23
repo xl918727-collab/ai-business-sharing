@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>真实应用展厅 · AI 业务分享课</title>
+  <link rel="stylesheet" href="assets/showcase.css">
+  <script src="assets/showcase-data.js?v=returns-live-1" defer></script>
+  <script src="assets/showcase.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#showcase-main">跳到应用展示</a>
+  <header class="showcase-header">
+    <a class="course-return" href="index.html#start"><span aria-hidden="true">↖</span> 返回分享课</a>
+    <div class="showcase-brand"><span class="brand-mark" aria-hidden="true">a<span>·</span></span><span>真实应用展厅<small>BUILT FOR REAL WORK</small></span></div>
+    <button class="quiet-button" type="button" id="showcase-fullscreen">全屏展示 <span aria-hidden="true">⛶</span></button>
+  </header>
+
+  <main id="showcase-main" tabindex="-1">
+    <details class="gallery-directory" id="app-directory">
+      <summary id="directory-summary"><span><b>切换应用</b><span id="app-count"></span></span><span class="directory-current" id="directory-current"></span><span class="directory-toggle" aria-hidden="true">＋</span></summary>
+      <nav class="app-nav" id="app-nav" aria-label="应用展厅"></nav>
+    </details>
+    <p class="empty-state" id="showcase-empty" hidden>应用资料尚未加载。请从完整交付包打开此页。</p>
+    <article id="app-exhibit" aria-labelledby="app-title" hidden>
+      <header class="app-heading">
+        <div><p class="eyebrow"><span id="app-tag"></span><span class="heading-line" aria-hidden="true"></span><span id="app-position"></span></p><h1 id="app-title"></h1><p class="app-summary" id="app-summary"></p></div>
+        <a class="practice-link" id="top-practice-link" hidden>亲手试一遍 <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <figure class="frame-panel">
+        <figcaption class="frame-top"><div><span class="picture-tag">演示画面</span><strong id="frame-label"></strong></div><div class="frame-top-actions"><div class="frame-controls" aria-label="切换演示画面"><button class="frame-arrow" id="previous-frame" type="button" aria-label="上一张画面">←</button><span id="frame-count" aria-live="polite" aria-atomic="true"></span><button class="frame-arrow" id="next-frame" type="button" aria-label="下一张画面">→</button></div><button id="open-image" class="outline-button" type="button">放大看细节 <span aria-hidden="true">↗</span></button></div></figcaption>
+        <button class="frame-stage" id="frame-stage" type="button" aria-label="放大当前演示画面">
+          <img id="frame-image" alt="" decoding="async">
+          <span class="image-failure" id="image-failure" hidden>这张演示画面未能加载，请检查交付包内的图片文件。</span>
+          <span class="frame-hint" aria-hidden="true">点击画面放大</span>
+        </button>
+        <div class="frame-bottom"><p id="frame-caption"></p></div>
+      </figure>
+
+      <div class="evidence-note"><p><span class="evidence-marker" aria-hidden="true"></span><strong>已核验</strong><span id="app-verified"></span></p><p id="limit-row"><strong>展示说明</strong><span id="app-limit"></span></p></div>
+
+      <section class="work-route" aria-labelledby="route-title">
+        <div class="route-intro"><p class="eyebrow">把一次需求，做成可重复的工作</p><h2 id="route-title">它接过什么，<br>交回什么？</h2><div class="input-output"><div><span>输入</span><p id="app-input"></p></div><span class="route-arrow" aria-hidden="true">↓</span><div><span>产物</span><p id="app-output"></p></div></div></div>
+        <div class="steps-panel"><div class="steps-heading"><h2>跟着这条路线看</h2><span id="step-count"></span></div><ol id="app-steps"></ol></div>
+      </section>
+
+      <section class="try-row" aria-label="继续体验"><div><span class="tiny-orbit" aria-hidden="true"><i></i><i></i><i></i></span><h2>看见之后，动手做一次。</h2><p id="try-description">选择适合自己的入口，把这个工作方式带回业务。</p></div><div class="try-actions"><a class="solid-button" id="practice-link" hidden></a><a class="outline-button" id="live-link" target="_blank" rel="noopener noreferrer" hidden></a><button class="text-button" type="button" id="copy-prompt" hidden>复制搭建指令 <span aria-hidden="true">⧉</span></button></div></section>
+      <p class="exhibit-foot"><span>画面用于讲解；不是正在连接业务系统。</span><span id="updated-at"></span></p>
+    </article>
+    <noscript><p class="empty-state">请启用 JavaScript 查看应用画面和教程；主课件仍可从上方返回。</p></noscript>
+  </main>
+
+  <dialog class="image-dialog" id="image-dialog" aria-labelledby="zoom-title">
+    <div class="zoom-toolbar"><div><span class="eyebrow">演示画面 · 放大查看</span><h2 id="zoom-title"></h2></div><div class="zoom-actions"><div class="zoom-options" role="group" aria-label="图片缩放"><button type="button" data-zoom="1" aria-pressed="true">适应宽度</button><button type="button" data-zoom="1.25" aria-pressed="false">125%</button><button type="button" data-zoom="1.6" aria-pressed="false">160%</button></div><button class="close-button" id="close-image" type="button" aria-label="关闭放大画面">×</button></div></div>
+    <div class="zoom-scroll" id="zoom-scroll" tabindex="0" aria-label="放大图片区域，可滚动查看"><div class="zoom-canvas"><img id="zoom-image" alt=""></div></div>
+    <div class="zoom-footer"><p id="zoom-caption"></p><span>滚动查看 · Esc 关闭</span></div>
+  </dialog>
+  <dialog class="copy-dialog" id="copy-dialog" aria-labelledby="copy-title"><div class="copy-head"><h2 id="copy-title">搭建指令已选中</h2><button class="close-button" id="close-copy" type="button" aria-label="关闭指令">×</button></div><p>按 Ctrl+C 或 ⌘C 复制，粘贴到你使用的 Agent。</p><textarea id="copy-text" readonly aria-label="可复制的搭建指令"></textarea></dialog>
+  <div id="showcase-toast" class="toast" role="status" aria-live="polite"></div>
+<script>if(window.parent!==window){document.querySelector('.course-return')?.setAttribute('hidden','');document.querySelectorAll('a[href^="index.html"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();parent.document.getElementById('resource-close').click();}));}</script></body>
+</html>

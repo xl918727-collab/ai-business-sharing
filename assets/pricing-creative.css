@@ -1,0 +1,297 @@
+.pricing-lab,.create-lab{--lab-ink:#17211d;--lab-muted:#64726a;--lab-line:#dce2d9;--lab-blue:#2558ed;--lab-green:#2b6b50;--lab-paper:#f5f6f2;color:var(--lab-ink)}
+.pricing-lab[hidden],.create-lab[hidden]{display:none!important}
+.pricing-lab *,.create-lab *{box-sizing:border-box}
+.pricing-lab button,.create-lab button,.pricing-lab input,.create-lab input,.create-lab textarea,.create-lab select{font:inherit}
+.pricing-lab button,.create-lab button{cursor:pointer}
+.pricing-lab button:focus-visible,.create-lab button:focus-visible,.pricing-lab input:focus-visible,.create-lab input:focus-visible,.create-lab textarea:focus-visible,.create-lab select:focus-visible,.pricing-lab summary:focus-visible,.create-lab summary:focus-visible{outline:3px solid #2558ed;outline-offset:4px}
+.pricing-lab .lab-heading,.create-lab .lab-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.pricing-lab .lab-kicker,.create-lab .lab-kicker{color:#2b6b50;font-size:12px;font-weight:750;letter-spacing:1.6px;margin:0 0 14px}
+.pricing-lab .lab-heading h1,.create-lab .lab-heading h1{font-size:clamp(32px,3.15vw,44px);font-weight:760;letter-spacing:-1.7px;line-height:1.24;margin:0 0 17px}
+.pricing-lab .lab-intro,.create-lab .lab-intro{font-size:16px;line-height:1.8;color:var(--lab-muted);margin:0;max-width:650px}
+.pricing-lab .lab-stamp,.create-lab .lab-stamp{display:inline-flex;align-items:center;gap:8px;color:#2b6b50;border:1px solid #cbd9cd;border-radius:40px;padding:9px 13px;font-size:12px;white-space:nowrap;margin-bottom:4px}
+.pricing-lab .lab-stamp>span,.create-lab .lab-stamp>span{width:6px;height:6px;background:#2b6b50;border-radius:50%}
+.pricing-lab .lab-panel-heading,.create-lab .lab-panel-heading,.create-lab .create-edit-heading{display:flex;align-items:center;gap:9px;margin:0 0 23px}
+.pricing-lab .lab-panel-heading h2,.create-lab .lab-panel-heading h2,.create-lab .create-edit-heading h2{font-size:16px;font-weight:720;margin:0}
+.pricing-lab .lab-small-number,.create-lab .lab-small-number{font-size:11px;font-weight:700;color:#7a857c;border:1px solid #cad2c8;border-radius:50%;width:25px;height:25px;display:inline-grid;place-items:center;flex:0 0 25px}
+.pricing-lab .price-workbench{display:grid;grid-template-columns:minmax(230px,.96fr) minmax(330px,1.45fr) minmax(230px,.93fr);border:1px solid var(--lab-line);border-radius:18px;overflow:hidden;background:#fff}
+.pricing-lab .price-inputs{padding:27px 24px;margin:0}
+.pricing-lab .price-presets{display:flex;gap:6px;margin:0 0 24px;flex-wrap:wrap}
+.pricing-lab .price-presets button{border:1px solid var(--lab-line);background:white;color:#59665e;border-radius:6px;padding:6px 9px;font-size:11px;line-height:1.4}
+.pricing-lab .price-presets button[aria-pressed=true]{color:#fff;background:#17211d;border-color:#17211d}
+.pricing-lab .price-field{margin-bottom:21px}
+.pricing-lab .price-field label,.pricing-lab .price-reverse>label{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:650;margin-bottom:9px}
+.pricing-lab .price-field label>span{color:#7a857c;font-size:10px;font-weight:400}
+.pricing-lab .price-number{display:flex;align-items:center;border-bottom:1px solid #ced7cf;background:#f8f9f5;padding:6px 12px 7px;border-radius:5px 5px 0 0;gap:8px}
+.pricing-lab .price-number input{min-width:0;width:100%;border:0;outline:0;background:transparent;font-size:28px;font-weight:650;color:#17211d;line-height:1.4;font-variant-numeric:tabular-nums}
+.pricing-lab .price-number input:focus-visible{outline:2px solid var(--lab-blue);outline-offset:3px}
+.pricing-lab .price-number input[aria-invalid=true]{color:#b5362d}
+.pricing-lab .price-number>span{font-size:14px;color:#667369}
+.pricing-lab input[type=range]{width:100%;margin:11px 0 0;accent-color:#2b6b50;height:18px;cursor:pointer}
+.pricing-lab .price-range-hints{display:flex;justify-content:space-between;font-size:10px;color:#829085;margin-top:1px}
+.pricing-lab .lab-error{font-size:12px;line-height:1.6;color:#ae3028;min-height:18px;margin:0}
+.pricing-lab .price-result{padding:34px 28px;background:#ecf1e8;display:flex;flex-direction:column;border-left:1px solid var(--lab-line);border-right:1px solid var(--lab-line)}
+.pricing-lab .price-result-label{font-size:13px;color:#4c6051;margin:0 0 15px}
+.pricing-lab .price-amount{display:flex;align-items:baseline;gap:8px;white-space:nowrap;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;min-width:0}
+.pricing-lab .price-amount>span{font-size:26px;font-weight:450}
+.pricing-lab .price-amount strong{font-size:clamp(42px,4.2vw,62px);font-weight:650;letter-spacing:-3px;line-height:1.15;overflow-wrap:anywhere;min-width:0;white-space:normal}
+.pricing-lab .price-result-caption{font-size:12px;color:#647561;line-height:1.7;margin:20px 0 15px}
+.pricing-lab .price-stack{display:flex;height:27px;gap:3px;border-radius:5px;overflow:hidden}
+.pricing-lab .price-stack>span{transition:width .35s ease;min-width:0}
+.pricing-lab .price-bar-cost,.pricing-lab .price-dot-cost{background:#2b6b50}
+.pricing-lab .price-bar-fee,.pricing-lab .price-dot-fee{background:#b5c1a8}
+.pricing-lab .price-bar-profit,.pricing-lab .price-dot-profit{background:#ed7647}
+.pricing-lab .price-breakdown{margin:16px 0 25px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pricing-lab .price-breakdown dt{font-size:11px;color:#5d6a5d;display:flex;align-items:center;gap:5px}
+.pricing-lab .price-breakdown i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.pricing-lab .price-breakdown dd{margin:7px 0 0;font-size:16px;font-weight:650;font-variant-numeric:tabular-nums;word-break:break-all}
+.pricing-lab .price-equation{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;background:#ffffff9c;padding:16px 9px;border:1px solid #d5dfd0;border-radius:7px;font-size:11px;line-height:1.6}
+.pricing-lab .price-equation b{font-weight:400;color:#82917e}
+.pricing-lab .price-equation strong{font-weight:600;color:#2b6b50}
+.pricing-lab .price-challenge{margin-top:auto;padding-top:31px}
+.pricing-lab .price-challenge>span{font-size:10px;font-weight:750;text-transform:uppercase;letter-spacing:1px;color:#2b6b50}
+.pricing-lab .price-challenge p{margin:8px 0 13px;font-size:14px;line-height:1.8;color:#425345}
+.pricing-lab .price-challenge button{padding:0;border:0;border-bottom:1px solid #9cad97;background:none;color:#2b6b50;font-size:13px;font-weight:650;line-height:1.8}
+.pricing-lab .price-reverse{padding:27px 22px;min-width:0}
+.pricing-lab .price-reverse-description{font-size:12px;color:#7a857c;line-height:1.7;margin:0 0 28px}
+.pricing-lab .price-reverse-actions{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0 7px}
+.pricing-lab .price-reverse-actions button{font-size:10px;color:#365147;border:0;border-bottom:1px solid #c8d2c8;background:none;padding:4px 0}
+.pricing-lab .price-reverse-metric{display:flex;flex-direction:column;gap:11px;margin-top:27px}
+.pricing-lab .price-reverse-metric>span{font-size:12px;color:#64726a}
+.pricing-lab .price-reverse-metric strong{font-size:34px;font-weight:650;letter-spacing:-1px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.pricing-lab .price-reverse-row{display:flex;justify-content:space-between;gap:12px;padding:17px 0;border-bottom:1px solid #e3e7df;font-size:12px}
+.pricing-lab .price-reverse-row>span{color:#64726a}
+.pricing-lab .price-verdict{background:#eaf3ec;color:#2b6b50;padding:9px 10px;font-size:11px;border-radius:5px;line-height:1.6;margin:18px 0 0}
+.pricing-lab .price-verdict.is-loss{background:#fcebe5;color:#a84423}
+.pricing-lab .price-verdict.is-below{background:#f8f1df;color:#765a17}
+.pricing-lab .price-rounding-note{font-size:10px;line-height:1.8;color:#7f897e;margin:16px 0 0}
+.pricing-lab .lab-footnote{font-size:11px;line-height:1.8;color:#707d70;margin:13px 2px 30px}
+.pricing-lab .lab-footnote strong{color:#516451;margin-right:10px}
+.pricing-lab .lab-learning-row{display:grid;grid-template-columns:1.28fr 1fr;gap:22px;align-items:start}
+.pricing-lab .lab-details{border-top:1px solid #ccd5c9;border-bottom:1px solid #dce2d9;background:transparent}
+.pricing-lab .lab-details summary{display:flex;align-items:baseline;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;padding:17px 0;font-size:14px;font-weight:650;line-height:1.7}
+.pricing-lab .lab-details summary::-webkit-details-marker{display:none}
+.pricing-lab .lab-details summary:after{content:'+';font-size:18px;flex:none;font-weight:400;order:2}
+.pricing-lab .lab-details[open] summary:after{content:'−'}
+.pricing-lab .lab-summary-label{font-size:10px;color:#7a857c;font-weight:400;margin-left:auto}
+.pricing-lab .lab-tutorial{padding-left:21px;margin:2px 0 17px;font-size:13px;line-height:1.95;color:#5a685b}
+.pricing-lab .lab-tutorial li{padding-left:5px;margin-bottom:7px}
+.pricing-lab .lab-tutorial b{color:#243b2c;font-weight:600}
+.pricing-lab .lab-text-button,.create-lab .lab-text-button{background:none;border:0;border-bottom:1px solid #a5b6a3;color:#2b6b50;padding:4px 0;font-size:12px;font-weight:650;margin:0 0 20px}
+.pricing-lab .lab-copy-status,.create-lab .lab-copy-status{font-size:11px;color:#2b6b50;margin-left:10px}
+.pricing-lab .lab-detail-body{font-size:13px;line-height:1.9;color:#5a685b;padding:0 0 19px}
+.pricing-lab .lab-detail-body p{margin:0 0 10px}
+.pricing-lab .lab-answer{border-left:2px solid #2b6b50;padding:8px 15px;background:#edf1e9;margin-top:18px!important}
+.pricing-lab .price-recording{margin-top:23px}
+.pricing-lab .price-recording video{display:block;width:100%;max-height:610px;background:#15211a;border-radius:8px;margin-top:16px}
+.create-lab .create-workbench{display:grid;grid-template-columns:280px minmax(0,1fr);border:1px solid #d3dccf;border-radius:17px;overflow:hidden;background:#fff}
+.create-lab .create-controls{padding:25px 23px;border-right:1px solid #d3dccf}
+.create-lab .create-controls>label{font-size:12px;font-weight:650;display:flex;align-items:center;justify-content:space-between;margin:0 0 9px}
+.create-lab .create-controls>label>span{font-size:10px;font-weight:400;color:#7b8779}
+.create-lab .create-controls textarea,.create-lab .create-controls>input,.create-lab .create-controls select{width:100%;border:1px solid #d5ddd0;border-radius:6px;background:#f8f9f5;color:#273a2c;padding:11px;font-size:12px;line-height:1.8;resize:vertical}
+.create-lab .create-controls textarea{min-height:149px;margin-bottom:11px}
+.create-lab .create-generate-button{display:flex;justify-content:space-between;align-items:center;width:100%;color:white;background:#2558ed;border:1px solid #2558ed;border-radius:6px;font-size:13px;font-weight:650;padding:12px 14px;min-height:44px}
+.create-lab .create-generate-button:hover{background:#1749d9}
+.create-lab .create-generate-button:disabled{opacity:.75;cursor:progress}
+.create-lab .create-model-note{font-size:10px;color:#788574;line-height:1.8;margin:10px 0 18px}
+.create-lab .create-progress{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
+.create-lab .create-progress li{font-size:11px;color:#8d9888;display:flex;gap:8px;align-items:center;transition:color .2s}
+.create-lab .create-progress li>span{display:grid;place-items:center;border-radius:50%;height:18px;width:18px;font-size:9px;border:1px solid #dae1d5}
+.create-lab .create-progress li.is-done{color:#2b6b50}
+.create-lab .create-progress li.is-done>span{background:#2b6b50;border-color:#2b6b50;color:#fff}
+.create-lab .create-progress li.is-active{color:#2558ed}
+.create-lab .create-progress li.is-active>span{color:#2558ed;border-color:#2558ed}
+.create-lab .create-status{font-size:10px;line-height:1.8;color:#77816f;margin:12px 0 23px;min-height:36px}
+.create-lab .create-edit-heading{margin:0 0 18px;border-top:1px solid #e0e5da;padding-top:24px}
+.create-lab .create-theme-field{padding:0;border:0;margin:16px 0;display:flex;gap:7px}
+.create-lab .create-theme-field legend{font-size:12px;font-weight:650;margin-bottom:9px}
+.create-lab .create-theme-field button{display:flex;gap:6px;align-items:center;background:#fff;border:1px solid #d5ddd0;padding:8px 9px;border-radius:5px;font-size:11px;color:#697462}
+.create-lab .create-theme-field button[aria-pressed=true]{border-color:#2b6b50;background:#f0f4ed;color:#263a2b}
+.create-lab .create-theme-field i{width:11px;height:11px;border-radius:50%}
+.create-lab .create-swatch-forest{background:#2b6b50}.create-lab .create-swatch-blue{background:#2558ed}
+.create-lab .create-download{display:flex;justify-content:space-between;align-items:center;width:100%;background:#17211d;color:white;border:0;border-radius:6px;padding:12px 13px;margin:19px 0 0;font-size:12px;min-height:44px}
+.create-lab .create-download:hover{background:#2b4535}
+.create-lab .create-export-note{font-size:10px;color:#85917b;line-height:1.8;margin:9px 0 0}
+.create-lab .create-preview-area{min-width:0;background:#e7ebe2}
+.create-lab .create-browser-bar{height:52px;padding:0 18px;display:flex;align-items:center;gap:14px;background:#fafbf7;border-bottom:1px solid #d3dccf}
+.create-lab .create-browser-dots{display:flex;gap:5px}.create-lab .create-browser-dots i{width:6px;height:6px;background:#c0c9b9;border-radius:50%}
+.create-lab .create-browser-name{font-size:9px;letter-spacing:1px;color:#7e8a74}
+.create-lab .create-view-switch{display:flex;gap:2px;margin-left:auto;background:#e9ede4;padding:3px;border-radius:5px}
+.create-lab .create-view-switch button{font-size:10px;background:none;border:0;padding:5px 9px;border-radius:3px;color:#64725b}
+.create-lab .create-view-switch button[aria-pressed=true]{background:#fff;color:#23381d;box-shadow:0 1px 2px #1a301519}
+.create-lab .create-preview-canvas{padding:20px;display:flex;justify-content:center;align-items:flex-start;min-height:725px;overflow:hidden}
+.create-lab .create-product-page{--product-paper:#f4efdf;--product-ink:#234c37;--product-soft:#dfe5ce;--product-line:#bdc6ae;--product-muted:#6b795c;width:100%;background:var(--product-paper);color:var(--product-ink);box-shadow:0 8px 25px #17301c0d;transition:max-width .4s ease,background .3s ease;min-width:0}
+.create-lab .create-product-page[data-theme=blue]{--product-paper:#f4f6ff;--product-ink:#214bcc;--product-soft:#e2e8ff;--product-line:#bcc9f3;--product-muted:#6376a8}
+.create-lab .create-product-brand{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 25px;border-bottom:1px solid var(--product-line)}
+.create-lab .create-product-brand>span:first-child{font-size:19px;font-weight:850;letter-spacing:-1px}
+.create-lab .create-brand-mark{margin:0 6px;font-weight:400}
+.create-lab .create-product-brand>span:last-child{font-size:6px;letter-spacing:1.5px;text-align:right}
+.create-lab .create-product-hero{display:grid;grid-template-columns:1fr 1.1fr;min-height:440px;overflow:hidden}
+.create-lab .create-product-copy{padding:36px 0 28px 26px;position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start}
+.create-lab .create-product-tag{font-size:7px;letter-spacing:1.2px;line-height:1.6}
+.create-lab .create-product-copy h2{font-size:clamp(26px,2.7vw,39px);font-weight:850;letter-spacing:-1.5px;line-height:1.27;max-width:280px;overflow-wrap:anywhere;margin:24px 0 18px}
+.create-lab .create-product-copy>p{font-size:11px;line-height:1.95;color:var(--product-muted);margin:0 0 28px;max-width:205px;overflow-wrap:anywhere}
+.create-lab .create-product-copy>button{display:flex;justify-content:space-between;gap:25px;background:var(--product-ink);color:var(--product-paper);border:0;padding:12px 13px;font-size:10px;min-height:40px}
+.create-lab .create-product-small{display:block;margin-top:auto;padding-top:32px;font-size:6px;letter-spacing:1.2px;color:var(--product-muted)}
+.create-lab .create-product-art{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 50%,var(--product-soft),transparent 69%)}
+.guitar3d{position:relative;overflow:hidden;touch-action:none}.guitar3d canvas{position:absolute;inset:0;width:100%!important;height:100%!important;cursor:grab}.guitar3d canvas:active{cursor:grabbing}.guitar3d-status{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);z-index:2;font-size:12px;font-weight:750;white-space:nowrap}.guitar3d-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;padding:6px 10px;border-radius:20px;background:#ffffffd9;color:#35473c;font-size:10px;font-weight:750;white-space:nowrap;box-shadow:0 5px 18px #182a1c18}.create-guitar3d{width:100%;height:545px;z-index:2}.mini-page-3d{grid-template-columns:1.15fr .85fr}.mini-guitar3d{min-height:310px;background:radial-gradient(circle at 50% 45%,#edf1db 0,transparent 68%)}
+.mini-try-3d{align-self:flex-start;border:1px solid #234c37;border-radius:7px;background:#234c37;color:#fff;padding:9px 12px;font-size:11px;font-weight:750;transition:transform .2s ease,background .2s ease}.mini-try-3d:hover{transform:translateY(-2px);background:#1664ff}
+.create-lab .create-product-art svg{width:100%;height:425px;max-width:350px;position:relative;z-index:1;filter:saturate(.85);transition:transform .5s ease}
+.create-lab .create-product-page:hover .create-product-art svg{transform:rotate(-2deg) translateY(-3px)}
+.create-lab .create-art-word{position:absolute;top:30px;left:0;font-size:70px;font-weight:900;letter-spacing:-5px;opacity:.08;line-height:1;max-width:100%;overflow:hidden}
+.create-lab .create-art-caption{font-size:6px;letter-spacing:1.5px;position:absolute;bottom:18px;right:24px;color:var(--product-muted)}
+.create-lab .create-product-specs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--product-line);border-bottom:1px solid var(--product-line);margin:0 25px;padding:18px 0;gap:12px}
+.create-lab .create-product-specs>div{display:flex;flex-direction:column;gap:7px}
+.create-lab .create-product-specs strong{font-size:21px;font-weight:750;letter-spacing:-.8px;white-space:nowrap}
+.create-lab .create-product-specs>div>span{font-size:7px;color:var(--product-muted);line-height:1.6}
+.create-lab .create-product-page details{margin:0 25px;border-bottom:1px solid var(--product-line)}
+.create-lab .create-product-page summary{font-size:10px;font-weight:650;padding:18px 0;display:flex;justify-content:space-between;list-style:none;cursor:pointer}
+.create-lab .create-product-page summary::-webkit-details-marker{display:none}
+.create-lab .create-product-page details[open] summary>span{transform:rotate(45deg)}
+.create-lab .create-product-page details>div{font-size:10px;line-height:1.8;color:var(--product-muted);padding:0 0 13px;overflow-wrap:anywhere}
+.create-lab .create-product-page details p{margin:0 0 8px}
+.create-lab .create-product-footer{display:flex;justify-content:space-between;gap:10px;font-size:6px;letter-spacing:1px;padding:17px 25px;line-height:1.7;color:var(--product-muted)}
+.create-lab .create-product-page[data-layout=gallery] .create-product-hero{grid-template-columns:1fr;position:relative}
+.create-lab .create-product-page[data-layout=gallery] .create-product-copy{align-items:center;text-align:center;padding:28px 24px 0}
+.create-lab .create-product-page[data-layout=gallery] .create-product-copy h2{max-width:480px;font-size:34px;margin:15px 0 12px}
+.create-lab .create-product-page[data-layout=gallery] .create-product-copy>p{max-width:440px;margin-bottom:18px}
+.create-lab .create-product-page[data-layout=gallery] .create-product-small{display:none}
+.create-lab .create-product-page[data-layout=gallery] .create-product-art{min-height:300px}
+.create-lab .create-product-page[data-layout=gallery] .create-product-art svg{height:340px}
+.create-lab .create-product-page[data-layout=gallery] .create-art-word{left:50%;transform:translateX(-50%);font-size:120px;top:60px}
+.create-lab .create-preview-canvas.is-mobile .create-product-page{max-width:360px}
+.create-lab .create-preview-canvas.is-mobile .create-product-hero{grid-template-columns:1fr}
+.create-lab .create-preview-canvas.is-mobile .create-product-copy{padding:26px 22px 0;align-items:center;text-align:center}
+.create-lab .create-preview-canvas.is-mobile .create-product-copy h2{font-size:31px;max-width:270px;margin:18px 0 12px}
+.create-lab .create-preview-canvas.is-mobile .create-product-copy>p{max-width:250px;margin-bottom:16px}
+.create-lab .create-preview-canvas.is-mobile .create-product-small{display:none}
+.create-lab .create-preview-canvas.is-mobile .create-product-art{min-height:290px}
+.create-lab .create-preview-canvas.is-mobile .create-product-art svg{height:315px}
+.create-lab .create-preview-canvas.is-mobile .create-art-word{font-size:96px;left:50%;transform:translateX(-50%)}
+.create-lab .create-preview-canvas.is-mobile .create-product-brand{padding:19px 22px}
+.create-lab .create-preview-canvas.is-mobile .create-product-brand>span:last-child{font-size:5px}
+.create-lab .create-preview-canvas.is-mobile .create-product-specs{margin:0 20px}
+.create-lab .create-preview-canvas.is-mobile .create-product-specs strong{font-size:18px}
+.create-lab .create-learning{display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid #ced7c9;margin-top:32px;padding-top:29px}
+.create-lab .create-learning h2{font-size:22px;line-height:1.5;letter-spacing:-.5px;margin:0 0 12px}
+.create-lab .create-learning>div>p:not(.lab-kicker){font-size:13px;line-height:1.95;color:#69785f;margin:0 0 14px}
+.create-lab .create-real-prompt{border-left:2px solid #2b6b50;padding-left:19px}
+@media(max-width:1100px){.pricing-lab .price-workbench{grid-template-columns:minmax(210px,1fr) minmax(280px,1.4fr)}.pricing-lab .price-reverse{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;column-gap:30px;border-top:1px solid var(--lab-line)}.pricing-lab .price-reverse .lab-panel-heading{grid-column:1/-1;margin-bottom:14px}.pricing-lab .price-reverse-description{grid-column:1/-1;margin-bottom:20px}.pricing-lab .price-reverse>label{grid-column:1}.pricing-lab .price-reverse>.price-number{grid-column:1}.pricing-lab .price-reverse-actions{grid-column:1}.pricing-lab #price-reverse-error{grid-column:1}.pricing-lab .price-reverse-metric{grid-column:2;grid-row:3/5;margin-top:0}.pricing-lab .price-reverse-row{grid-column:2;grid-row:5;padding-top:8px}.pricing-lab .price-verdict{grid-column:2;grid-row:6;margin-top:4px}.pricing-lab .price-rounding-note{grid-column:1/-1}.create-lab .create-workbench{grid-template-columns:240px minmax(0,1fr)}.create-lab .create-controls{padding:24px 18px}.create-lab .create-preview-canvas{padding:15px}.create-lab .create-product-hero{grid-template-columns:1fr}.create-lab .create-product-copy{padding:29px 25px 0;align-items:center;text-align:center}.create-lab .create-product-copy h2{max-width:320px;margin:18px 0 12px;font-size:32px}.create-lab .create-product-copy>p{max-width:320px;margin-bottom:16px}.create-lab .create-product-small{display:none}.create-lab .create-product-art{min-height:280px}.create-lab .create-product-art svg{height:300px}.create-lab .create-art-word{font-size:100px;left:50%;transform:translateX(-50%)}.create-lab .create-product-specs strong{font-size:19px}}
+@media(max-width:720px){.pricing-lab .lab-heading,.create-lab .lab-heading{display:block;margin-bottom:23px}.pricing-lab .lab-heading h1,.create-lab .lab-heading h1{font-size:34px;letter-spacing:-1.2px}.pricing-lab .lab-stamp,.create-lab .lab-stamp{margin-top:17px;font-size:10px}.pricing-lab .lab-intro,.create-lab .lab-intro{font-size:14px}.pricing-lab .price-workbench{grid-template-columns:1fr}.pricing-lab .price-inputs{padding:23px}.pricing-lab .price-field{margin-bottom:20px}.pricing-lab .price-result{border:0;border-top:1px solid var(--lab-line);padding:27px 23px}.pricing-lab .price-amount strong{font-size:61px}.pricing-lab .price-challenge{padding-top:25px}.pricing-lab .price-reverse{display:block;padding:26px 23px}.pricing-lab .price-reverse-description{margin-bottom:23px}.pricing-lab .price-reverse-metric{margin-top:20px}.pricing-lab .price-reverse-row{padding:17px 0}.pricing-lab .price-verdict{margin-top:15px}.pricing-lab .lab-learning-row{grid-template-columns:1fr;gap:22px}.pricing-lab .lab-summary-label{display:none}.pricing-lab .lab-footnote{font-size:10px;margin-bottom:24px}.pricing-lab .lab-tutorial{font-size:13px}.create-lab .create-workbench{grid-template-columns:1fr}.create-lab .create-controls{border-right:0;border-bottom:1px solid #d3dccf;padding:24px 21px}.create-lab .create-controls textarea{min-height:135px}.create-lab .create-controls>label,.create-lab .create-theme-field legend{font-size:13px}.create-lab .create-controls textarea,.create-lab .create-controls>input,.create-lab .create-controls select{font-size:16px}.create-lab .create-theme-field button{font-size:12px;min-height:40px}.create-lab .create-browser-bar{padding:0 12px;gap:9px}.create-lab .create-browser-name{font-size:8px;letter-spacing:.5px}.create-lab .create-preview-canvas{padding:10px;min-height:0}.create-lab .create-product-brand{padding:21px 20px}.create-lab .create-product-brand>span:last-child{font-size:5px;letter-spacing:.7px}.create-lab .create-product-copy{padding:28px 20px 0}.create-lab .create-product-copy h2,.create-lab .create-product-page[data-layout=gallery] .create-product-copy h2{font-size:31px;max-width:265px}.create-lab .create-product-art svg{height:320px}.create-lab .create-art-caption{font-size:6px}.create-lab .create-product-specs{margin:0 18px;gap:8px}.create-lab .create-product-specs strong{font-size:18px}.create-lab .create-product-specs>div>span{font-size:6px}.create-lab .create-product-page details{margin:0 18px}.create-lab .create-product-footer{padding:18px;font-size:5px;letter-spacing:.5px}.create-lab .create-learning{grid-template-columns:1fr;gap:13px;margin-top:27px;padding-top:25px}.create-lab .create-learning h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.pricing-lab *,.create-lab *{scroll-behavior:auto!important;transition:none!important;animation:none!important}.create-lab .create-product-page:hover .create-product-art svg{transform:none}}
+.create-lab .create-source-details{margin:0 0 15px;border-top:1px solid #dbe2d4;border-bottom:1px solid #dbe2d4}
+.create-lab .create-source-details summary{padding:12px 0;display:flex;justify-content:space-between;font-size:13px;font-weight:600;cursor:pointer;list-style:none}
+.create-lab .create-source-details summary::-webkit-details-marker{display:none}
+.create-lab .create-source-details[open] summary>span{transform:rotate(45deg)}
+.create-lab .create-source-details label{display:flex;justify-content:space-between;font-size:11px;line-height:1.6;margin:4px 0 9px}
+.create-lab .create-source-details label>span{font-size:10px;color:#7b8779}
+@media(min-width:950px){
+body.projector .pricing-lab .lab-heading h1,body.projector .create-lab .lab-heading h1{font-size:48px;line-height:1.24}
+body.projector .pricing-lab .lab-intro,body.projector .create-lab .lab-intro{font-size:21px;max-width:900px}
+body.projector .pricing-lab .lab-kicker,body.projector .create-lab .lab-kicker{font-size:17px}
+body.projector .pricing-lab .lab-stamp,body.projector .create-lab .lab-stamp{font-size:16px}
+body.projector .pricing-lab .lab-panel-heading h2,body.projector .create-lab .lab-panel-heading h2,body.projector .create-lab .create-edit-heading h2{font-size:23px}
+body.projector .pricing-lab .lab-small-number,body.projector .create-lab .lab-small-number{width:32px;height:32px;flex-basis:32px;font-size:14px}
+body.projector .pricing-lab .price-workbench{grid-template-columns:minmax(270px,1fr) minmax(400px,1.4fr) minmax(270px,1fr)}
+body.projector .pricing-lab .price-inputs,body.projector .pricing-lab .price-reverse{padding:30px 25px}
+body.projector .pricing-lab .price-result{padding:35px 30px}
+body.projector .pricing-lab .price-presets{gap:7px;flex-wrap:wrap}
+body.projector .pricing-lab .price-presets button{font-size:16px;padding:9px 12px;min-height:44px}
+body.projector .pricing-lab .price-field label,body.projector .pricing-lab .price-reverse>label{font-size:20px;align-items:baseline;flex-wrap:wrap}
+body.projector .pricing-lab .price-field label>span{font-size:14px}
+body.projector .pricing-lab .price-number input{font-size:34px}
+body.projector .pricing-lab .price-number>span{font-size:19px}
+body.projector .pricing-lab .price-range-hints{font-size:13px}
+body.projector .pricing-lab .price-result-label{font-size:20px}
+body.projector .pricing-lab .price-amount>span{font-size:34px}
+body.projector .pricing-lab .price-amount strong{font-size:72px;letter-spacing:-3px}
+body.projector .pricing-lab .price-result-caption{font-size:18px}
+body.projector .pricing-lab .price-stack{height:38px}
+body.projector .pricing-lab .price-breakdown{gap:8px;margin:22px 0 29px}
+body.projector .pricing-lab .price-breakdown dt{font-size:18px}
+body.projector .pricing-lab .price-breakdown dd{font-size:21px}
+body.projector .pricing-lab .price-breakdown i{width:9px;height:9px}
+body.projector .pricing-lab .price-equation{font-size:15px;padding:19px 10px}
+body.projector .pricing-lab .price-challenge>span{font-size:16px}
+body.projector .pricing-lab .price-challenge p{font-size:21px;line-height:1.75}
+body.projector .pricing-lab .price-challenge button{font-size:20px;min-height:48px}
+body.projector .pricing-lab .price-reverse-description{font-size:18px;margin-bottom:25px}
+body.projector .pricing-lab .price-reverse-actions{gap:10px}
+body.projector .pricing-lab .price-reverse-actions button{font-size:17px;min-height:44px}
+body.projector .pricing-lab .price-reverse-metric>span{font-size:19px}
+body.projector .pricing-lab .price-reverse-metric strong{font-size:46px}
+body.projector .pricing-lab .price-reverse-row{font-size:19px}
+body.projector .pricing-lab .price-verdict{font-size:17px;padding:13px}
+body.projector .pricing-lab .price-rounding-note{font-size:15px;line-height:1.85}
+body.projector .pricing-lab .lab-error{font-size:16px;line-height:1.7}
+body.projector .pricing-lab .lab-footnote{font-size:16px;line-height:1.85;margin-top:19px}
+body.projector .pricing-lab .lab-details summary{font-size:22px;padding:20px 0}
+body.projector .pricing-lab .lab-summary-label{font-size:14px}
+body.projector .pricing-lab .lab-tutorial,body.projector .pricing-lab .lab-detail-body{font-size:19px;line-height:1.95}
+body.projector .pricing-lab .lab-text-button,body.projector .create-lab .lab-text-button{font-size:19px;min-height:48px}
+body.projector .pricing-lab .lab-copy-status,body.projector .create-lab .lab-copy-status{font-size:16px}
+body.projector .create-lab .create-workbench{grid-template-columns:330px minmax(0,1fr)}
+body.projector .create-lab .create-controls{padding:29px 24px}
+body.projector .create-lab .create-source-details summary{font-size:19px;min-height:48px}
+body.projector .create-lab .create-source-details label{font-size:17px}
+body.projector .create-lab .create-source-details label>span{font-size:13px}
+body.projector .create-lab .create-controls textarea{font-size:17px;min-height:210px}
+body.projector .create-lab .create-generate-button,body.projector .create-lab .create-download{font-size:20px;min-height:52px;padding:14px 16px}
+body.projector .create-lab .create-model-note{font-size:15px;line-height:1.8}
+body.projector .create-lab .create-progress li{font-size:17px;gap:10px}
+body.projector .create-lab .create-progress li>span{width:25px;height:25px;font-size:12px}
+body.projector .create-lab .create-status{font-size:15px;line-height:1.85;margin-bottom:23px;min-height:54px}
+body.projector .create-lab .create-controls>label,body.projector .create-lab .create-theme-field legend{font-size:19px}
+body.projector .create-lab .create-controls>label>span{font-size:14px}
+body.projector .create-lab .create-controls>input,body.projector .create-lab .create-controls select{font-size:19px}
+body.projector .create-lab .create-theme-field button{font-size:17px;min-height:45px;padding:10px}
+body.projector .create-lab .create-theme-field i{width:15px;height:15px}
+body.projector .create-lab .create-export-note{font-size:14px;line-height:1.8}
+body.projector .create-lab .create-browser-bar{height:63px;padding:0 24px}
+body.projector .create-lab .create-browser-name{font-size:13px}
+body.projector .create-lab .create-view-switch button{font-size:17px;padding:7px 12px;min-height:39px}
+body.projector .create-lab .create-preview-canvas{padding:25px;min-height:0}
+body.projector .create-lab .create-product-brand{padding:26px 28px}
+body.projector .create-lab .create-product-brand>span:first-child{font-size:27px}
+body.projector .create-lab .create-product-brand>span:last-child{font-size:10px;letter-spacing:1px}
+body.projector .create-lab .create-product-hero{min-height:560px}
+body.projector .create-lab .create-product-copy{padding:43px 0 30px 28px}
+body.projector .create-lab .create-product-tag{font-size:11px;letter-spacing:.7px}
+body.projector .create-lab .create-product-copy h2{font-size:47px;max-width:340px;line-height:1.3;margin:30px 0 22px}
+body.projector .create-lab .create-product-copy>p{font-size:18px;line-height:1.85;max-width:290px}
+body.projector .create-lab .create-product-copy>button{font-size:18px;padding:15px;min-height:50px;gap:21px}
+body.projector .create-lab .create-product-small{font-size:10px;letter-spacing:.5px}
+body.projector .create-lab .create-product-art svg{height:540px;max-width:410px}
+body.projector .create-lab .create-art-word{font-size:102px;top:44px;letter-spacing:-7px}
+body.projector .create-lab .create-art-caption{font-size:10px;letter-spacing:1px}
+body.projector .create-lab .create-product-specs{margin:0 28px;padding:25px 0}
+body.projector .create-lab .create-product-specs strong{font-size:28px}
+body.projector .create-lab .create-product-specs>div>span{font-size:12px}
+body.projector .create-lab .create-product-page details{margin:0 28px}
+body.projector .create-lab .create-product-page summary{font-size:19px;padding:21px 0}
+body.projector .create-lab .create-product-page details>div{font-size:16px;line-height:1.9}
+body.projector .create-lab .create-product-footer{font-size:10px;padding:22px 28px;letter-spacing:.3px}
+body.projector .create-lab .create-product-page[data-layout=gallery] .create-product-copy{padding:35px 24px 0}
+body.projector .create-lab .create-product-page[data-layout=gallery] .create-product-copy h2{max-width:620px}
+body.projector .create-lab .create-product-page[data-layout=gallery] .create-product-copy>p{max-width:580px}
+body.projector .create-lab .create-product-page[data-layout=gallery] .create-product-art svg{height:410px}
+body.projector .create-lab .create-product-page[data-layout=gallery] .create-art-word{font-size:160px;top:80px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-hero{min-height:0}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-copy{padding:30px 22px 0}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-copy h2{font-size:36px;max-width:280px;margin:20px 0 15px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-copy>p{font-size:16px;max-width:270px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-art svg{height:340px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-brand>span:last-child{display:none}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-specs strong{font-size:20px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-specs>div>span{font-size:9px}
+body.projector .create-lab .create-preview-canvas.is-mobile .create-product-footer{font-size:8px}
+body.projector .create-lab .create-learning h2{font-size:30px}
+body.projector .create-lab .create-learning>div>p:not(.lab-kicker){font-size:21px;line-height:1.9}
+}
+@media(min-width:950px) and (max-width:1200px){body.projector .pricing-lab .price-workbench{grid-template-columns:1fr 1.4fr}body.projector .pricing-lab .price-reverse{grid-column:1/-1}body.projector .create-lab .create-workbench{grid-template-columns:300px minmax(0,1fr)}body.projector .create-lab .create-product-copy{padding:30px 23px 0}body.projector .create-lab .create-product-copy h2{font-size:39px}body.projector .create-lab .create-product-art svg{height:350px}body.projector .create-lab .create-product-hero{min-height:0}}
+@media(min-width:950px){
+body.projector .pricing-lab .lab-heading,body.projector .create-lab .lab-heading{margin-bottom:24px}
+body.projector .pricing-lab .lab-heading .lab-kicker,body.projector .create-lab .lab-heading .lab-kicker{margin-bottom:10px}
+body.projector .pricing-lab .lab-heading h1,body.projector .create-lab .lab-heading h1{font-size:44px;line-height:1.24;margin-bottom:12px}
+body.projector .pricing-lab .lab-heading h1 br,body.projector .create-lab .lab-heading h1 br{display:none}
+body.projector .pricing-lab .lab-intro,body.projector .create-lab .lab-intro{font-size:22px}
+}
